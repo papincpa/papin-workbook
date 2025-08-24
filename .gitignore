@@ -1,0 +1,40 @@
+# 🔒 Environment & secrets
+.env
+.env.*
+!.env.example   # keep only the safe example file
+
+# 🔑 Certificates / keys
+*.pem
+*.p12
+*.key
+*.crt
+
+# 📦 Dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+
+# 🏗 Build artifacts
+.next/
+out/
+dist/
+build/
+
+# 🐍 Python (if any backend code exists)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 🛠 Local tools
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.local
+*.swp
+
+# 🚀 Deployment folders
+.vercel/
+.netlify/
+serverless/
