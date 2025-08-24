@@ -89,9 +89,6 @@
         .form-fields button:hover {
             background-color: #dcc15f; transform: translateY(-2px);
         }
-        /* MailerLite Success Message Styling */
-        .row-success { display: none; }
-        .ml-form-successContent { color: var(--white); }
     </style>
 </head>
 <body>
@@ -116,40 +113,27 @@
                 </ul>
             </div>
 
-            <!-- ========= SIGNUP FORM SECTION (NOW POWERED BY MAILERLITE) ========= -->
             <section class="form-section">
-                <!-- This div will be controlled by MailerLite's Javascript -->
                 <div class="ml-subscribe-form-30003728">
-                    <!-- This div contains the form and will be hidden on success -->
                     <div class="row-form">
                         <h2>Get Your Free Workbook</h2>
                         <p>Signup for additional content and free workshops!</p>
                         
-                        <!-- The Form Tag with the ACTION from MailerLite -->
+                        <!-- The target="_blank" has been removed to ensure redirect happens in the same tab -->
                         <form action="https://assets.mailerlite.com/jsonp/669570/forms/163643099972633817/subscribe" method="post" class="form-fields">
-                            <!-- Name Field -->
                             <input type="text" name="fields[name]" placeholder="Your Name" required>
-                            <!-- Email Field (name attribute from MailerLite) -->
                             <input type="email" name="fields[email]" placeholder="Email Address" required>
-                            <!-- Google reCAPTCHA block from MailerLite -->
-<div style="margin-bottom: 20px;">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
-</div>
-                            <!-- Hidden Fields from MailerLite (CRITICAL) -->
+                            
+                            <div style="margin-bottom: 20px;">
+                                <script src="https://www.google.com/recaptcha/api.js"></script>
+                                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+                            </div>
+                            
                             <input type="hidden" name="ml-submit" value="1">
                             <input type="hidden" name="anticsrf" value="true">
 
                             <button type="submit" class="primary">Download Now</button>
                         </form>
-                    </div>
-
-                    <!-- This div is hidden by default and shown on success -->
-                    <div class="row-success">
-                        <div class="ml-form-successContent">
-                            <h4>Thank you!</h4>
-                            <p>You've successfully signed up. Please check your email for the workbook.</p>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -157,12 +141,7 @@
     </div>
 
     <!-- ========= MAILERLITE JAVASCRIPT (CRITICAL FOR FUNCTIONALITY) ========= -->
-    <script>
-        function ml_webform_success_30003728() {
-            // This command runs on success and forces the redirect to your workbook.
-        window.location.href = '/interactive-workbook.html';
-        }
-    </script>
+    <!-- The custom success function has been REMOVED. We only need the main script. -->
     <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
     <!-- End MailerLite Javascript -->
 
