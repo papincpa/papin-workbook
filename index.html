@@ -131,7 +131,11 @@
                             <input type="text" name="fields[name]" placeholder="Your Name" required>
                             <!-- Email Field (name attribute from MailerLite) -->
                             <input type="email" name="fields[email]" placeholder="Email Address" required>
-                            
+                            <!-- Google reCAPTCHA block from MailerLite -->
+<div style="margin-bottom: 20px;">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+</div>
                             <!-- Hidden Fields from MailerLite (CRITICAL) -->
                             <input type="hidden" name="ml-submit" value="1">
                             <input type="hidden" name="anticsrf" value="true">
