@@ -7,34 +7,21 @@
     <style>
         /* --- Google Fonts --- */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
-
-        /* --- Brand Color Variables --- */
         :root {
             --dark-blue: #0b2a33;
             --gold: #cba328;
             --white: #ffffff;
-            --text-color: #333;
         }
-
-        /* --- General Styles --- */
         body {
             font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            /* Changed background to your brand's dark blue */
             background-color: var(--dark-blue);
-            color: var(--text-color);
-            line-height: 1.7;
-        }
-
-        /* --- Structure --- */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
             padding: 30px 20px;
         }
-
-        /* --- Logo Card --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
         .logo-card {
             background-color: var(--white);
             text-align: center;
@@ -42,183 +29,141 @@
             border-radius: 8px;
             margin-bottom: 30px;
         }
-
         .logo-card img {
             max-width: 250px;
             height: auto;
         }
-
-        /* --- Main Content Card --- */
         .content-card {
             background-color: var(--white);
             border-radius: 8px;
-            overflow: hidden; /* Ensures child elements respect the border radius */
+            overflow: hidden;
         }
-        
         .card-text {
             padding: 40px;
         }
-
         .card-text h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.8rem;
             color: var(--dark-blue);
             margin-top: 0;
-            margin-bottom: 20px;
             text-align: center;
         }
-
-        .card-text p {
-            font-size: 1.1rem;
-            color: #444;
-            margin-bottom: 20px;
+        .card-text p, .card-text li {
+            font-size: 1.1rem; color: #444; line-height: 1.7;
         }
-        
-        .card-text strong {
-            color: var(--dark-blue);
-        }
-
-        .card-text a {
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.3s ease;
-        }
-
-        .card-text a:hover {
-            border-bottom: 1px solid var(--gold);
-        }
-
         .card-text ul {
             list-style-type: '✓';
             padding-left: 20px;
             color: var(--dark-blue);
         }
-
-        .card-text li {
-            padding-left: 15px;
-            margin-bottom: 12px;
-            color: var(--text-color);
+        .card-text a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
         }
-        
-        .card-text li strong {
-             color: var(--dark-blue);
-        }
-
-
-        /* --- Form Section (integrated within the card) --- */
+        /* --- Form Section --- */
         .form-section {
             background-color: var(--dark-blue);
             color: var(--white);
             padding: 50px 40px;
             text-align: center;
         }
-
         .form-section h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.2rem;
             margin-top: 0;
-            margin-bottom: 15px;
         }
-        
-        .form-section p {
-            max-width: 500px;
-            margin: 0 auto 30px auto;
-            opacity: 0.9;
-        }
-
         .form-fields {
             max-width: 450px;
-            margin: 0 auto;
+            margin: 20px auto 0 auto;
         }
-
-        .form-fields input {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-size: 1rem;
-            box-sizing: border-box;
+        .form-fields input[type="text"], .form-fields input[type="email"] {
+            width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 5px;
+            border: 1px solid #ddd; font-size: 1rem; box-sizing: border-box;
         }
-
         .form-fields button {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--gold);
-            color: var(--dark-blue);
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            font-family: 'Roboto', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            width: 100%; padding: 15px; background-color: var(--gold);
+            color: var(--dark-blue); border: none; border-radius: 5px;
+            font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: all 0.3s ease;
         }
-
         .form-fields button:hover {
-            background-color: #dcc15f;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background-color: #dcc15f; transform: translateY(-2px);
         }
-        
-        /* --- Responsive Design --- */
-        @media (max-width: 600px) {
-            .card-text h1 {
-                font-size: 2.1rem;
-            }
-            .card-text, .form-section {
-                padding: 30px 25px;
-            }
-        }
+        /* MailerLite Success Message Styling */
+        .row-success { display: none; }
+        .ml-form-successContent { color: var(--white); }
     </style>
 </head>
 <body>
 
     <div class="container">
-
-        <!-- ========= LOGO CARD ========= -->
         <header class="logo-card">
-            <!-- Make sure you have a 'logo.png' file in the same folder -->
             <img src="logo.png" alt="Papin Speaks Logo">
         </header>
 
-        <!-- ========= MAIN CONTENT CARD ========= -->
         <main class="content-card">
             <div class="card-text">
                 <h1>From Chaos to Clarity</h1>
                 <p><strong>Welcome, listeners!</strong></p>
                 <p>Likely you've heard Chris Papin on a podcast. Perhaps as a guest, or maybe on his own show, BLABO (Behave Like A Business Owner).</p>
-                <p>Through countless conversations, one thing is certain: <strong>a clear plan is the foundation of every successful business.</strong> If you're new to BLABO, you can <a href="https://missionmatters.com/unlocking-business-success-with-blabo/" target="_blank">listen here</a> to get the practical strategies Chris shares.</p>
-                <p>Now, it's time to put those insights into action for <em>your</em> business.</p>
+                <p>Through countless conversations, one thing is certain: <strong>a clear plan is the foundation of every successful business.</strong> If you're new to BLABO, you can <a href="https://missionmatters.com/unlocking-business-success-with-blabo/" target="_blank">listen here</a>.</p>
                 <ul>
                     <li><strong>Gain Crystal-Clear Clarity:</strong> Define your mission, vision, and goals.</li>
                     <li><strong>Master Your Market:</strong> Identify your ideal customer and analyze your competition.</li>
-                    <li><strong>Take Control of Your Finances:</strong> Get a firm grip on your numbers, from funding to budgeting.</li>
+                    <li><strong>Take Control of Your Finances:</strong> Get a firm grip on your numbers.</li>
                     <li><strong>Build a Rock-Solid Foundation:</strong> Navigate legal structures and compliance.</li>
                     <li><strong>Scale with a Purpose:</strong> Plan for team growth, technology, and sustainability.</li>
                 </ul>
             </div>
 
-            <!-- ========= SIGNUP FORM SECTION ========= -->
+            <!-- ========= SIGNUP FORM SECTION (NOW POWERED BY MAILERLITE) ========= -->
             <section class="form-section">
-                <h2>Get Your Free Workbook</h2>
-                <p>Get the exclusive tool designed to turn your entrepreneurial vision into a structured, actionable plan.</p>
-                
-                <!--
-                    IMPORTANT: Replace the "#" in the action attribute with the URL
-                    from your email marketing service (e.g., Mailchimp, ConvertKit).
-                -->
-                <form action="#" method="POST" class="form-fields">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email Address" required>
-                    <button type="submit">Download Now</button>
-                </form>
+                <!-- This div will be controlled by MailerLite's Javascript -->
+                <div class="ml-subscribe-form-30003728">
+                    <!-- This div contains the form and will be hidden on success -->
+                    <div class="row-form">
+                        <h2>Get Your Free Workbook</h2>
+                        <p>Signup for additional content and free workshops!</p>
+                        
+                        <!-- The Form Tag with the ACTION from MailerLite -->
+                        <form action="https://assets.mailerlite.com/jsonp/669570/forms/163643099972633817/subscribe" method="post" target="_blank" class="form-fields">
+                            <!-- Name Field -->
+                            <input type="text" name="fields[name]" placeholder="Your Name" required>
+                            <!-- Email Field (name attribute from MailerLite) -->
+                            <input type="email" name="fields[email]" placeholder="Email Address" required>
+                            
+                            <!-- Hidden Fields from MailerLite (CRITICAL) -->
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" class="primary">Download Now</button>
+                        </form>
+                    </div>
+
+                    <!-- This div is hidden by default and shown on success -->
+                    <div class="row-success">
+                        <div class="ml-form-successContent">
+                            <h4>Thank you!</h4>
+                            <p>You've successfully signed up. Please check your email for the workbook.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
-
     </div>
+
+    <!-- ========= MAILERLITE JAVASCRIPT (CRITICAL FOR FUNCTIONALITY) ========= -->
+    <script>
+        function ml_webform_success_30003728() {
+            var $ = ml_jQuery || jQuery;
+            // This finds our specific form wrapper and shows the success message.
+            var formWrapper = $('.ml-subscribe-form-30003728');
+            formWrapper.find('.row-success').show();
+            formWrapper.find('.row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+    <!-- End MailerLite Javascript -->
 
 </body>
 </html>
