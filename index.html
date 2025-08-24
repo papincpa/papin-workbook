@@ -114,36 +114,29 @@
             </div>
 
             <section class="form-section">
-                <div class="ml-subscribe-form-30003728">
-                    <div class="row-form">
-                        <h2>Get Your Free Workbook</h2>
-                        <p>Signup for additional content and free workshops!</p>
-                        
-                        <!-- THE ONLY CHANGE IS RE-ADDING data-redirect="YOUR_URL" -->
-                        <form action="https://assets.mailerlite.com/jsonp/669570/forms/163643099972633817/subscribe" data-redirect="https://papinspeaks.com/interactive-workbook.html" method="post" class="form-fields">
-                            <input type="text" name="fields[name]" placeholder="Your Name" required>
-                            <input type="email" name="fields[email]" placeholder="Email Address" required>
-                            
-                            <div style="margin-bottom: 20px;">
-                                <script src="https://www.google.com/recaptcha/api.js"></script>
-                                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
-                            </div>
-                            
-                            <input type="hidden" name="ml-submit" value="1">
-                            <input type="hidden" name="anticsrf" value="true">
-
-                            <button type="submit" class="primary">Download Now</button>
-                        </form>
+                <h2>Get Your Free Workbook</h2>
+                <p>Signup for additional content and free workshops!</p>
+                
+                <!-- This is now a simple, standard HTML form. No complex scripts. -->
+                <form action="https://assets.mailerlite.com/jsonp/669570/forms/163643099972633817/subscribe" method="post" class="form-fields">
+                    <input type="text" name="fields[name]" placeholder="Your Name" required>
+                    <input type="email" name="fields[email]" placeholder="Email Address" required>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <script src="https://www.google.com/recaptcha/api.js"></script>
+                        <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
                     </div>
-                </div>
+                    
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+
+                    <button type="submit" class="primary">Download Now</button>
+                </form>
             </section>
         </main>
     </div>
 
-    <!-- ========= MAILERLITE JAVASCRIPT (CRITICAL FOR FUNCTIONALITY) ========= -->
-    <!-- The custom success function has been REMOVED. We only need the main script. -->
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-    <!-- End MailerLite Javascript -->
+    <!-- NO MAILERLITE JAVASCRIPT IS NEEDED HERE. IT HAS BEEN REMOVED. -->
 
 </body>
 </html>
