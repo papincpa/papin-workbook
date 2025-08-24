@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papin Speaks | Your Free Business Planning Workbook</title>
+    <style>
+        /* --- Google Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
+        /* --- Brand Color Variables --- */
+        :root {
+            --dark-blue: #0b2a33;
+            --gold: #cba328;
+            --white: #ffffff;
+            --text-color: #333;
+        }
+
+        /* --- General Styles --- */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* Changed background to your brand's dark blue */
+            background-color: var(--dark-blue);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        /* --- Structure --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* --- Logo Card --- */
+        .logo-card {
+            background-color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .logo-card img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        /* --- Main Content Card --- */
+        .content-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden; /* Ensures child elements respect the border radius */
+        }
+        
+        .card-text {
+            padding: 40px;
+        }
+
+        .card-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--dark-blue);
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card-text p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        
+        .card-text strong {
+            color: var(--dark-blue);
+        }
+
+        .card-text a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .card-text a:hover {
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .card-text ul {
+            list-style-type: '✓';
+            padding-left: 20px;
+            color: var(--dark-blue);
+        }
+
+        .card-text li {
+            padding-left: 15px;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+        
+        .card-text li strong {
+             color: var(--dark-blue);
+        }
+
+
+        /* --- Form Section (integrated within the card) --- */
+        .form-section {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .form-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .form-section p {
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        .form-fields {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .form-fields input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .form-fields button {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--gold);
+            color: var(--dark-blue);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-fields button:hover {
+            background-color: #dcc15f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        /* --- Responsive Design --- */
+        @media (max-width: 600px) {
+            .card-text h1 {
+                font-size: 2.1rem;
+            }
+            .card-text, .form-section {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ========= LOGO CARD ========= -->
+        <header class="logo-card">
+            <!-- Make sure you have a 'logo.png' file in the same folder -->
+            <img src="logo.png" alt="Papin Speaks Logo">
+        </header>
+
+        <!-- ========= MAIN CONTENT CARD ========= -->
+        <main class="content-card">
+            <div class="card-text">
+                <h1>From Chaos to Clarity</h1>
+                <p><strong>Welcome, listeners!</strong></p>
+                <p>Likely you've heard Chris Papin on a podcast. Perhaps as a guest, or maybe on his own show, BLABO (Behave Like A Business Owner).</p>
+                <p>Through countless conversations, one thing is certain: <strong>a clear plan is the foundation of every successful business.</strong> If you're new to BLABO, you can <a href="https://missionmatters.com/unlocking-business-success-with-blabo/" target="_blank">listen here</a> to get the practical strategies Chris shares.</p>
+                <p>Now, it's time to put those insights into action for <em>your</em> business.</p>
+                <ul>
+                    <li><strong>Gain Crystal-Clear Clarity:</strong> Define your mission, vision, and goals.</li>
+                    <li><strong>Master Your Market:</strong> Identify your ideal customer and analyze your competition.</li>
+                    <li><strong>Take Control of Your Finances:</strong> Get a firm grip on your numbers, from funding to budgeting.</li>
+                    <li><strong>Build a Rock-Solid Foundation:</strong> Navigate legal structures and compliance.</li>
+                    <li><strong>Scale with a Purpose:</strong> Plan for team growth, technology, and sustainability.</li>
+                </ul>
+            </div>
+
+            <!-- ========= SIGNUP FORM SECTION ========= -->
+            <section class="form-section">
+                <h2>Get Your Free Workbook</h2>
+                <p>Get the exclusive tool designed to turn your entrepreneurial vision into a structured, actionable plan.</p>
+                
+                <!--
+                    IMPORTANT: Replace the "#" in the action attribute with the URL
+                    from your email marketing service (e.g., Mailchimp, ConvertKit).
+                -->
+                <form action="#" method="POST" class="form-fields">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit">Download Now</button>
+                </form>
+            </section>
+        </main>
+
+    </div>
+
+</body>
+</html>
