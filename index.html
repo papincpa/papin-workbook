@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>Papin Speaks | Your Free Business Planning Workbook</title>
     <style>
         /* --- Google Fonts --- */
@@ -69,36 +69,32 @@
             text-align: center;
         }
         
-        /* --- CSS OVERRIDES FOR MAILERLITE EMBED --- */
-        #mlb2-30003728.ml-form-embedContainer {
-            width: 100% !important; /* Ensure it fits our container */
+        /* --- NEW CSS OVERRIDES FOR THE OFFICIAL MAILERLITE EMBED --- */
+        #mlb2-30003728.ml-form-embedContainer .ml-form-embedWrapper {
+            background-color: transparent !important; /* Remove MailerLite's default background */
         }
-        .ml-form-embedWrapper {
-            background-color: transparent !important; /* Remove MailerLite's gray background */
-            padding: 0 !important;
-        }
-        .ml-form-embedBody .ml-form-embedContent h4 {
+        #mlb2-30003728 .ml-form-embedContent h4 {
             font-family: 'Playfair Display', serif !important;
             font-size: 2.2rem !important;
             color: var(--white) !important;
             font-weight: 700 !important;
         }
-        .ml-form-embedBody .ml-form-embedContent p {
+        #mlb2-30003728 .ml-form-embedContent p {
             color: var(--white) !important;
-            opacity: 0.9;
-            font-size: 1rem !important;
+            font-family: 'Roboto', sans-serif !important;
             text-align: center !important;
         }
-        .ml-form-embedBody .ml-form-fieldRow input.form-control {
-            width: 100% !important;
+        #mlb2-30003728 .form-control {
+            height: auto !important;
             padding: 15px !important;
-            margin-bottom: 15px !important;
             border-radius: 5px !important;
-            border: 1px solid #ddd !important;
             font-size: 1rem !important;
-            box-sizing: border-box !important;
         }
-        .ml-form-embedSubmit button.primary {
+        #mlb2-30003728 .ml-form-horizontalRow {
+            max-width: 450px; /* Constrain the form width */
+            margin: 0 auto;
+        }
+        #mlb2-30003728 .ml-button-horizontal button, #mlb2-30003728 .ml-mobileButton-horizontal button {
             width: 100% !important;
             padding: 15px !important;
             background-color: var(--gold) !important;
@@ -107,15 +103,19 @@
             border-radius: 5px !important;
             font-size: 1.2rem !important;
             font-weight: bold !important;
-            cursor: pointer !important;
             transition: all 0.3s ease !important;
         }
-        .ml-form-embedSubmit button.primary:hover {
+        #mlb2-30003728 .ml-button-horizontal button:hover, #mlb2-30003728 .ml-mobileButton-horizontal button:hover {
             background-color: #dcc15f !important;
             transform: translateY(-2px);
         }
-        .g-recaptcha { /* Center the reCAPTCHA */
-            display: inline-block;
+        #mlb2-30003728 .ml-form-recaptcha { /* Center the reCAPTCHA */
+            width: 100% !important;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .g-recaptcha {
+            display: inline-block; /* Allows centering to work */
         }
     </style>
 </head>
@@ -142,59 +142,64 @@
             </div>
 
             <section class="form-section">
-                <!-- ========= FULL MAILERLITE EMBED CODE ========= -->
-                <!-- This code is directly from MailerLite and will now be styled by our CSS above -->
+                <!-- ========= FULL, OFFICIAL MAILERLITE EMBED CODE ========= -->
                 <div id="mlb2-30003728" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-30003728">
-                    <div class="ml-form-align-center">
-                        <div class="ml-form-embedWrapper embedForm">
-                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                                <div class="ml-form-embedContent" style=" ">
-                                    <h4>Get Your Free Workbook</h4>
-                                    <p style="text-align: center;">Signup for additional content and free workshops!</p>
-                                </div>
-                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/669570/forms/163643099972633817/subscribe" data-code="" method="post" target="_blank">
-                                    <div class="ml-form-formContent">
-                                        <div class="ml-form-fieldRow">
-                                            <div class="ml-field-group ml-field-name">
-                                                <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Name" autocomplete="name">
-                                            </div>
-                                        </div>
-                                        <div class="ml-form-fieldRow ml-last-item">
-                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ml-form-recaptcha ml-validate-required" style="float: left; width: 100%; text-align: center;">
-                                        <script src="https://www.google.com/recaptcha/api.js"></script>
-                                        <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
-                                    </div>
-                                    <input type="hidden" name="ml-submit" value="1">
-                                    <div class="ml-form-embedSubmit">
-                                        <button type="submit" class="primary">Download Now</button>
-                                        <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                            <div class="ml-form-embedSubmitLoad"></div>
-                                            <span class="sr-only">Loading...</span>
-                                        </button>
-                                    </div>
-                                    <input type="hidden" name="anticsrf" value="true">
-                                </form>
-                            </div>
-                            <div class="ml-form-successBody row-success" style="display: none">
-                                <div class="ml-form-successContent">
-                                    <h4>Thank you!</h4>
-                                    <p style="text-align: center;">You have successfully joined our subscriber list.</p>
-                                </div>
-                            </div>
+                  <div class="ml-form-align-center ">
+                    <div class="ml-form-embedWrapper embedForm">
+                      <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                        <div class="ml-form-embedContent" style=" ">
+                          <h4>Get Your Free Workbook</h4>
+                          <p style="text-align: center;">Signup for additional content and free workshops!</p>
                         </div>
+                        <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/669570/forms/163643099972633817/subscribe" data-code="" method="post" target="_blank">
+                          <div class="ml-form-formContent horozintalForm">
+                            <div class="ml-form-horizontalRow">
+                              <div class="ml-input-horizontal">
+                                <div style="width: 100%;" class="horizontal-fields">
+                                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                    <input type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="ml-button-horizontal primary ">
+                                <button type="submit" class="primary">Subscribe</button>
+                                <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                  <div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ml-form-recaptcha ml-validate-required" style="float: left;">
+                              <script src="https://www.google.com/recaptcha/api.js"></script>
+                              <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+                          </div>
+                          <input type="hidden" name="ml-submit" value="1">
+                          <div class="ml-mobileButton-horizontal">
+                            <button type="submit" class="primary">Subscribe</button>
+                            <button disabled="disabled" style="display: none;" type="button" class="loading">
+                              <div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span>
+                            </button>
+                          </div>
+                          <input type="hidden" name="anticsrf" value="true">
+                        </form>
+                      </div>
+                      <div class="ml-form-successBody row-success" style="display: none">
+                        <div class="ml-form-successContent">
+                          <h4>Thank you!</h4>
+                          <p style="text-align: center;">You have successfully joined our subscriber list.</p>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
                 <script>
-                    function ml_webform_success_30003728() {
-                        var $ = ml_jQuery || jQuery;
-                        $('.ml-subscribe-form-30003728 .row-success').show();
-                        $('.ml-subscribe-form-30003728 .row-form').hide();
+                  function ml_webform_success_30003728() {
+                    try {
+                      window.top.location.href = 'https://papinspeaks.com/interactive-workbook.html';
+                    } catch (e) {
+                      window.location.href = 'https://papinspeaks.com/interactive-workbook.html';
                     }
+                  }
                 </script>
                 <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
                 <!-- ========= END MAILERLITE EMBED CODE ========= -->
