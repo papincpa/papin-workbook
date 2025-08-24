@@ -61,6 +61,7 @@
             text-decoration: none;
             font-weight: 500;
         }
+        /* --- Form Section --- */
         .form-section {
             background-color: var(--dark-blue);
             color: var(--white);
@@ -68,7 +69,7 @@
             text-align: center;
         }
         
-        /* --- CSS OVERRIDES FOR MAILERLITE EMBED --- */
+        /* --- CSS OVERRIDES FOR THE OFFICIAL MAILERLITE EMBED --- */
         #mlb2-30003728.ml-form-embedContainer .ml-form-embedWrapper {
             background-color: transparent !important;
         }
@@ -93,18 +94,19 @@
             max-width: 450px;
             margin: 0 auto;
         }
-        #mlb2-30003728 .ml-button-horizontal button, #mlb2-30003728 .ml-mobileButton-horizontal button {
+        /* --- STYLING FOR THE SINGLE, SMALLER BUTTON --- */
+        #mlb2-30003728 .ml-button-horizontal button {
             width: 100% !important;
-            padding: 15px !important;
+            padding: 12px !important; /* Reduced padding */
             background-color: var(--gold) !important;
             color: var(--dark-blue) !important;
             border: none !important;
             border-radius: 5px !important;
-            font-size: 1.2rem !important;
+            font-size: 1rem !important; /* Reduced font size */
             font-weight: bold !important;
             transition: all 0.3s ease !important;
         }
-        #mlb2-30003728 .ml-button-horizontal button:hover, #mlb2-30003728 .ml-mobileButton-horizontal button:hover {
+        #mlb2-30003728 .ml-button-horizontal button:hover {
             background-color: #dcc15f !important;
             transform: translateY(-2px);
         }
@@ -116,20 +118,6 @@
         .g-recaptcha {
             display: inline-block;
         }
-        
-        /* --- THE FIX FOR THE DOUBLE BUTTON --- */
-        .ml-mobileButton-horizontal {
-            display: none !important; /* Hides the mobile-only button by default */
-        }
-        @media (max-width: 400px) {
-            #mlb2-30003728 .ml-button-horizontal {
-                display: none !important; /* Hides the desktop button on mobile */
-            }
-            #mlb2-30003728 .ml-mobileButton-horizontal {
-                display: inline-block !important; /* Shows the mobile button on mobile */
-            }
-        }
-        /* --- END OF FIX --- */
 
     </style>
 </head>
@@ -156,7 +144,7 @@
             </div>
 
             <section class="form-section">
-                <!-- ========= FULL, OFFICIAL MAILERLITE EMBED CODE ========= -->
+                <!-- ========= FULL MAILERLITE EMBED CODE (MODIFIED) ========= -->
                 <div id="mlb2-30003728" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-30003728">
                   <div class="ml-form-align-center ">
                     <div class="ml-form-embedWrapper embedForm">
@@ -176,9 +164,47 @@
                                 </div>
                               </div>
                               <div class="ml-button-horizontal primary ">
-                                <button type="submit" class="primary">Subscribe</button>
+                                <!-- CHANGED BUTTON TEXT -->
+                                <button type="submit" class="primary">Download Now</button>
                                 <button disabled="disabled" style="display: none;" type="button" class="loading">
                                   <div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span>
                                 </button>
                               </div>
-           
+                            </div>
+                          </div>
+                          <div class="ml-form-recaptcha ml-validate-required" style="float: left;">
+                              <script src="https://www.google.com/recaptcha/api.js"></script>
+                              <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+                          </div>
+                          <input type="hidden" name="ml-submit" value="1">
+                          
+                          <!-- THE SECOND BUTTON DIV HAS BEEN DELETED -->
+
+                          <input type="hidden" name="anticsrf" value="true">
+                        </form>
+                      </div>
+                      <div class="ml-form-successBody row-success" style="display: none">
+                        <div class="ml-form-successContent">
+                          <h4>Thank you!</h4>
+                          <p style="text-align: center;">You have successfully joined our subscriber list.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  function ml_webform_success_30003728() {
+                    try {
+                      window.top.location.href = 'https://papinspeaks.com/interactive-workbook.html';
+                    } catch (e) {
+                      window.location.href = 'https://papinspeaks.com/interactive-workbook.html';
+                    }
+                  }
+                </script>
+                <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+                <!-- ========= END MAILERLITE EMBED CODE ========= -->
+            </section>
+        </main>
+    </div>
+</body>
+</html>
