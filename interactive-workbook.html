@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Business Planning Workbook - Papin Speaks</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap');
+        :root {
+            --dark-blue: #0b2a33;
+            --gold: #cba328;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark-blue);
+            margin: 0;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid var(--dark-blue);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header img { max-width: 200px; margin-bottom: 20px; }
+        .header h1 { font-family: 'Playfair Display', serif; color: var(--dark-blue); font-size: 28px; margin: 0; }
+        .section-title { font-family: 'Playfair Display', serif; color: var(--dark-blue); font-size: 22px; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
+        .field { margin-bottom: 25px; }
+        .field-label { font-weight: 700; font-size: 16px; margin-bottom: 10px; display: block; }
+        input[type="text"], textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; font-family: 'Roboto', sans-serif; box-sizing: border-box; }
+        textarea { min-height: 80px; resize: vertical; }
+        .checkbox-group label { margin-right: 15px; font-weight: normal; display: inline-block; margin-bottom: 5px; }
+        .checkbox-group input { margin-right: 5px; transform: scale(1.2); }
+        
+        /* --- Floating Print Button Style --- */
+        .print-button {
+            position: fixed;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            width: 80px; /* Changed to be more compact */
+            height: 80px;
+            padding: 10px;
+            background-color: var(--gold);
+            color: var(--dark-blue);
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            border-radius: 50%; /* Circular button */
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .print-button:hover {
+            background-color: #dcc15f;
+            transform: translateY(-50%) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 1100px) {
+            .print-button {
+                /* Adjust for smaller screens so it doesn't overlap content */
+                right: 15px;
+                width: 70px;
+                height: 70px;
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 768px) {
+            /* On mobile, make it a bottom bar */
+            .print-button {
+                top: auto;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                border-radius: 0;
+                transform: none;
+                padding: 20px;
+                font-size: 18px;
+            }
+            body { padding-bottom: 80px; } /* Add space for the button */
+        }
+        @media print {
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; }
+            .print-button, .header { display: none; }
+            input[type="text"], textarea { border: none; border-bottom: 1px solid #ccc; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Papin Speaks Logo">
+            <h1>Online Business Planning Workbook</h1>
+        </div>
+        
+        <button class="print-button" onclick="window.print()">Print Plan</button>
+        
+        <!-- ALL 15 SECTIONS OF THE FORM ARE INCLUDED HERE -->
+        <!-- SECTION 1 -->
+        <h2 class="section-title">Section 1: The Game Plan (Business Foundation)</h2>
+        <div class="field"><label class="field-label">Business Name:</label><input type="text"></div>
+        <div class="field"><label class="field-label">Mission Statement:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Short-term Goals (Next 6 Months):</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Long-term Goals (1-3 Years):</label><textarea></textarea></div>
+
+        <!-- SECTION 2 -->
+        <h2 class="section-title">Section 2: The Scouting Report (Market Research)</h2>
+        <div class="field"><label class="field-label">Ideal Customer Profile (Age, Location, Interests):</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Why do your customers need your product/service?</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Unique Selling Proposition:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Your Business Industry:</label><input type="text"></div>
+        <div class="field"><label class="field-label">Key Industry Trends:</label><textarea></textarea></div>
+        
+        <!-- SECTION 3 -->
+        <h2 class="section-title">Section 3: Funding and Financial Management</h2>
+        <div class="field"><label class="field-label">Initial Funding Needed:</label><input type="text" style="width: 250px;"></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Funding Sources:</label><br>
+            <label><input type="checkbox"> Personal Savings</label> <label><input type="checkbox"> Bank Loan</label> <label><input type="checkbox"> Investors</label> <label><input type="checkbox"> Crowdfunding</label> <label><input type="checkbox"> Friends & Family</label> <label><input type="checkbox"> Grants</label>
+        </div>
+        <div class="field"><label class="field-label">Top 3 Monthly Expenses:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Monthly Income Target:</label><input type="text" style="width: 250px;"></div>
+        <div class="field"><label class="field-label">Breakeven Point:</label><input type="text" style="width: 250px;"></div>
+
+        <!-- SECTION 4 -->
+        <h2 class="section-title">Section 4: Legal Structure and Compliance</h2>
+        <div class="field checkbox-group">
+            <label class="field-label">Choose your business structure:</label><br>
+            <label><input type="checkbox"> Sole Proprietorship</label> <label><input type="checkbox"> Partnership</label> <label><input type="checkbox"> Limited Liability Company (LLC)</label> <label><input type="checkbox"> Corporation</label>
+        </div>
+        <div class="field"><label class="field-label">Required Licenses:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Required Permits:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Key Regulations to Follow:</label><textarea></textarea></div>
+
+        <!-- SECTION 5 -->
+        <h2 class="section-title">Section 5: Product or Service Development</h2>
+        <div class="field"><label class="field-label">Your Product/Service:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Key Features:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Key Benefits:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Quality Standards:</label><textarea></textarea></div>
+
+        <!-- SECTION 6 -->
+        <h2 class="section-title">Section 6: Branding and Marketing</h2>
+        <div class="field"><label class="field-label">Brand Name:</label><input type="text"></div>
+        <div class="field"><label class="field-label">Tagline:</label><input type="text"></div>
+        <div class="field"><label class="field-label">Brand Values:</label><textarea></textarea></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Marketing Channels:</label><br>
+            <label><input type="checkbox"> Social Media</label> <label><input type="checkbox"> Website/Blog</label> <label><input type="checkbox"> Email Marketing</label> <label><input type="checkbox"> Print Advertising</label> <label><input type="checkbox"> Word-of-Mouth</label> <label><input type="checkbox"> Online Advertising</label>
+        </div>
+        <div class="field"><label class="field-label">Customer Engagement Strategy:</label><textarea></textarea></div>
+
+        <!-- SECTION 7 -->
+        <h2 class="section-title">Section 7: Sales Strategy</h2>
+        <div class="field"><label class="field-label">Target Customer Profile:</label><textarea></textarea></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Sales Methods:</label><br>
+            <label><input type="checkbox"> Direct Sales</label> <label><input type="checkbox"> Online Sales</label> <label><input type="checkbox"> Retail Store</label> <label><input type="checkbox"> Phone Sales</label> <label><input type="checkbox"> Trade Shows</label>
+        </div>
+        <div class="field"><label class="field-label">Customer Follow-up Strategy:</label><textarea></textarea></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Pricing Strategy:</label><br>
+            <label><input type="checkbox"> Competitive</label> <label><input type="checkbox"> Premium</label> <label><input type="checkbox"> Value-based</label> <label><input type="checkbox"> Cost-plus</label>
+        </div>
+
+        <!-- SECTION 8 -->
+        <h2 class="section-title">Section 8: Team Building</h2>
+        <div class="field"><label class="field-label">Key Roles Needed:</label><textarea></textarea></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Desired Team Culture:</label><br>
+            <label><input type="checkbox"> Collaborative</label> <label><input type="checkbox"> Innovative</label> <label><input type="checkbox"> Results-driven</label> <label><input type="checkbox"> Customer-focused</label>
+        </div>
+        <div class="field"><label class="field-label">Training Plan:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Hiring Goals (Next 12 Months):</label><input type="text"></div>
+
+        <!-- SECTION 9 -->
+        <h2 class="section-title">Section 9: Technology and Infrastructure</h2>
+        <div class="field checkbox-group">
+            <label class="field-label">Essential Technology:</label><br>
+            <label><input type="checkbox"> Computer/Laptop</label> <label><input type="checkbox"> Point of Sale</label> <label><input type="checkbox"> Inventory Mgmt</label> <label><input type="checkbox"> CRM</label> <label><input type="checkbox"> Accounting Software</label>
+        </div>
+        <div class="field checkbox-group">
+            <label class="field-label">Data Storage Solution:</label><br>
+            <label><input type="checkbox"> Cloud</label> <label><input type="checkbox"> Local Servers</label> <label><input type="checkbox"> Hybrid</label>
+        </div>
+        <div class="field"><label class="field-label">Scalability Plan:</label><textarea></textarea></div>
+
+        <!-- SECTION 10 -->
+        <h2 class="section-title">Section 10: Risk Management</h2>
+        <div class="field"><label class="field-label">Top 3 Business Risks:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Risk Mitigation Strategies:</label><textarea></textarea></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Insurance Coverage Needed:</label><br>
+            <label><input type="checkbox"> Property</label> <label><input type="checkbox"> Liability</label> <label><input type="checkbox"> Business Interruption</label> <label><input type="checkbox"> Cyber Liability</label>
+        </div>
+        <div class="field"><label class="field-label">Emergency Response Plan:</label><textarea></textarea></div>
+
+        <!-- SECTION 11 -->
+        <h2 class="section-title">Section 11: Customer Experience</h2>
+        <div class="field"><label class="field-label">How customers first discover you:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Ideal customer experience:</label><textarea></textarea></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Support Channels:</label><br>
+            <label><input type="checkbox"> Phone</label> <label><input type="checkbox"> Email</label> <label><input type="checkbox"> Live Chat</label> <label><input type="checkbox"> Social Media</label> <label><input type="checkbox"> In-person</label>
+        </div>
+        <div class="field"><label class="field-label">Loyalty Program/Retention Strategy:</label><textarea></textarea></div>
+
+        <!-- SECTION 12 -->
+        <h2 class="section-title">Section 12: Networking and Partnerships</h2>
+        <div class="field"><label class="field-label">Networking Goals:</label><textarea></textarea></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Networking Activities:</label><br>
+            <label><input type="checkbox"> Industry Conferences</label> <label><input type="checkbox"> Local Events</label> <label><input type="checkbox"> Online Communities</label> <label><input type="checkbox"> Chamber of Commerce</label>
+        </div>
+        <div class="field"><label class="field-label">Ideal Partnership Types:</label><textarea></textarea></div>
+
+        <!-- SECTION 13 -->
+        <h2 class="section-title">Section 13: Adaptability and Innovation</h2>
+        <div class="field"><label class="field-label">Recent Industry Changes:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">Product/Service Adaptation Plan:</label><textarea></textarea></div>
+        <div class="field"><label class="field-label">New Ideas to Explore:</label><textarea></textarea></div>
+        
+        <!-- SECTION 14 -->
+        <h2 class="section-title">Section 14: Sustainability and Social Responsibility</h2>
+        <div class="field checkbox-group">
+            <label class="field-label">Sustainability Practices:</label><br>
+            <label><input type="checkbox"> Recycling</label> <label><input type="checkbox"> Energy Efficiency</label> <label><input type="checkbox"> Waste Reduction</label> <label><input type="checkbox"> Sustainable Sourcing</label>
+        </div>
+        <div class="field"><label class="field-label">Aligned Cause/Mission:</label><textarea></textarea></div>
+        
+        <!-- SECTION 15 -->
+        <h2 class="section-title">Section 15: Exit Strategy</h2>
+        <div class="field"><label class="field-label">10-Year Vision:</label><textarea></textarea></div>
+        <div class="field checkbox-group">
+            <label class="field-label">Preferred Exit Strategy:</label><br>
+            <label><input type="checkbox"> Sell to Competitor</label> <label><input type="checkbox"> Management Buyout</label> <label><input type="checkbox"> Family Succession</label> <label><input type="checkbox"> IPO</label>
+        </div>
+        <div class="field"><label class="field-label">Skills Future Leader Will Need:</label><textarea></textarea></div>
+    </div>
+</body>
+</html>
