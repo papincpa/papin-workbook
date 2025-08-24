@@ -61,7 +61,6 @@
             text-decoration: none;
             font-weight: 500;
         }
-        /* --- Form Section --- */
         .form-section {
             background-color: var(--dark-blue);
             color: var(--white);
@@ -69,7 +68,7 @@
             text-align: center;
         }
         
-        /* --- CSS OVERRIDES FOR THE OFFICIAL MAILERLITE EMBED --- */
+        /* --- CSS OVERRIDES FOR THE NEW MAILERLITE EMBED --- */
         #mlb2-30003728.ml-form-embedContainer .ml-form-embedWrapper {
             background-color: transparent !important;
         }
@@ -94,15 +93,15 @@
             max-width: 450px;
             margin: 0 auto;
         }
-        /* --- STYLING FOR THE SINGLE, SMALLER BUTTON --- */
+        /* Style the single button and hide the mobile one on desktop */
         #mlb2-30003728 .ml-button-horizontal button {
             width: 100% !important;
-            padding: 12px !important; /* Reduced padding */
+            padding: 12px !important;
             background-color: var(--gold) !important;
             color: var(--dark-blue) !important;
             border: none !important;
             border-radius: 5px !important;
-            font-size: 1rem !important; /* Reduced font size */
+            font-size: 1rem !important;
             font-weight: bold !important;
             transition: all 0.3s ease !important;
         }
@@ -110,15 +109,17 @@
             background-color: #dcc15f !important;
             transform: translateY(-2px);
         }
-        #mlb2-30003728 .ml-form-recaptcha {
-            width: 100% !important;
-            text-align: center;
-            margin-top: 15px;
+        #mlb2-30003728 .ml-mobileButton-horizontal {
+            display: none !important; /* This hides the second button on desktop */
         }
-        .g-recaptcha {
-            display: inline-block;
+        @media (max-width: 400px) {
+            #mlb2-30003728 .ml-button-horizontal {
+                display: none !important; /* Hides the desktop button on mobile */
+            }
+            #mlb2-30003728 .ml-mobileButton-horizontal {
+                display: inline-block !important; /* Shows the mobile button on mobile */
+            }
         }
-
     </style>
 </head>
 <body>
@@ -144,7 +145,7 @@
             </div>
 
             <section class="form-section">
-                <!-- ========= FULL MAILERLITE EMBED CODE (MODIFIED) ========= -->
+                <!-- ========= YOUR NEW, CORRECT MAILERLITE CODE STARTS HERE ========= -->
                 <div id="mlb2-30003728" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-30003728">
                   <div class="ml-form-align-center ">
                     <div class="ml-form-embedWrapper embedForm">
@@ -164,7 +165,6 @@
                                 </div>
                               </div>
                               <div class="ml-button-horizontal primary ">
-                                <!-- CHANGED BUTTON TEXT -->
                                 <button type="submit" class="primary">Download Now</button>
                                 <button disabled="disabled" style="display: none;" type="button" class="loading">
                                   <div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span>
@@ -172,14 +172,13 @@
                               </div>
                             </div>
                           </div>
-                          <div class="ml-form-recaptcha ml-validate-required" style="float: left;">
-                              <script src="https://www.google.com/recaptcha/api.js"></script>
-                              <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
-                          </div>
                           <input type="hidden" name="ml-submit" value="1">
-                          
-                          <!-- THE SECOND BUTTON DIV HAS BEEN DELETED -->
-
+                          <div class="ml-mobileButton-horizontal">
+                            <button type="submit" class="primary">Download Now</button>
+                            <button disabled="disabled" style="display: none;" type="button" class="loading">
+                              <div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span>
+                            </button>
+                          </div>
                           <input type="hidden" name="anticsrf" value="true">
                         </form>
                       </div>
@@ -202,7 +201,7 @@
                   }
                 </script>
                 <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-                <!-- ========= END MAILERLITE EMBED CODE ========= -->
+                <!-- ========= END MAILERLITE CODE ========= -->
             </section>
         </main>
     </div>
