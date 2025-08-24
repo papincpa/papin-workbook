@@ -159,11 +159,8 @@
     <!-- ========= MAILERLITE JAVASCRIPT (CRITICAL FOR FUNCTIONALITY) ========= -->
     <script>
         function ml_webform_success_30003728() {
-            var $ = ml_jQuery || jQuery;
-            // This finds our specific form wrapper and shows the success message.
-            var formWrapper = $('.ml-subscribe-form-30003728');
-            formWrapper.find('.row-success').show();
-            formWrapper.find('.row-form').hide();
+            // This command runs on success and forces the redirect to your workbook.
+        window.location.href = '/interactive-workbook.html';
         }
     </script>
     <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
