@@ -24,6 +24,39 @@
             border-radius: 8px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
+        
+        /* --- Confirmation Message Styles --- */
+        .confirmation-section {
+            background-color: #e8f5e8;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .confirmation-section h2 {
+            color: #2e7d32;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin: 0 0 15px 0;
+        }
+        .confirmation-section p {
+            color: #2e7d32;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .confirmation-section ol {
+            text-align: left;
+            display: inline-block;
+            color: #2e7d32;
+            font-size: 16px;
+            margin: 15px 0;
+        }
+        .confirmation-section li {
+            margin: 8px 0;
+            font-weight: 500;
+        }
+        
         .header {
             text-align: center;
             border-bottom: 2px solid var(--dark-blue);
@@ -96,13 +129,23 @@
         @media print {
             body { background-color: white; padding: 0; }
             .container { box-shadow: none; padding: 0; }
-            .print-button, .header { display: none; }
+            .print-button, .header, .confirmation-section { display: none; }
             input[type="text"], textarea { border: none; border-bottom: 1px solid #ccc; border-radius: 0; }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Confirmation Section -->
+        <div class="confirmation-section">
+            <h2>✓ Success!</h2>
+            <p><strong>You've successfully submitted your information. Just a couple steps left:</strong></p>
+            <ol>
+                <li><strong>Confirm Your Email Address</strong> (you might need to check Junk/Spam)</li>
+                <li><strong>After you confirm, you will receive your PDF Workbook Email.</strong> (Check Your Junk/Spam)</li>
+            </ol>
+        </div>
+        
         <div class="header">
             <img src="logo.png" alt="Papin Speaks Logo">
             <h1>Online Business Planning Workbook</h1>
@@ -201,56 +244,4 @@
         <div class="field"><label class="field-label">Scalability Plan:</label><textarea></textarea></div>
 
         <!-- SECTION 10 -->
-        <h2 class="section-title">Section 10: Risk Management</h2>
-        <div class="field"><label class="field-label">Top 3 Business Risks:</label><textarea></textarea></div>
-        <div class="field"><label class="field-label">Risk Mitigation Strategies:</label><textarea></textarea></div>
-        <div class="field checkbox-group">
-            <label class="field-label">Insurance Coverage Needed:</label><br>
-            <label><input type="checkbox"> Property</label> <label><input type="checkbox"> Liability</label> <label><input type="checkbox"> Business Interruption</label> <label><input type="checkbox"> Cyber Liability</label>
-        </div>
-        <div class="field"><label class="field-label">Emergency Response Plan:</label><textarea></textarea></div>
-
-        <!-- SECTION 11 -->
-        <h2 class="section-title">Section 11: Customer Experience</h2>
-        <div class="field"><label class="field-label">How customers first discover you:</label><textarea></textarea></div>
-        <div class="field"><label class="field-label">Ideal customer experience:</label><textarea></textarea></div>
-        <div class="field checkbox-group">
-            <label class="field-label">Support Channels:</label><br>
-            <label><input type="checkbox"> Phone</label> <label><input type="checkbox"> Email</label> <label><input type="checkbox"> Live Chat</label> <label><input type="checkbox"> Social Media</label> <label><input type="checkbox"> In-person</label>
-        </div>
-        <div class="field"><label class="field-label">Loyalty Program/Retention Strategy:</label><textarea></textarea></div>
-
-        <!-- SECTION 12 -->
-        <h2 class="section-title">Section 12: Networking and Partnerships</h2>
-        <div class="field"><label class="field-label">Networking Goals:</label><textarea></textarea></div>
-        <div class="field checkbox-group">
-            <label class="field-label">Networking Activities:</label><br>
-            <label><input type="checkbox"> Industry Conferences</label> <label><input type="checkbox"> Local Events</label> <label><input type="checkbox"> Online Communities</label> <label><input type="checkbox"> Chamber of Commerce</label>
-        </div>
-        <div class="field"><label class="field-label">Ideal Partnership Types:</label><textarea></textarea></div>
-
-        <!-- SECTION 13 -->
-        <h2 class="section-title">Section 13: Adaptability and Innovation</h2>
-        <div class="field"><label class="field-label">Recent Industry Changes:</label><textarea></textarea></div>
-        <div class="field"><label class="field-label">Product/Service Adaptation Plan:</label><textarea></textarea></div>
-        <div class="field"><label class="field-label">New Ideas to Explore:</label><textarea></textarea></div>
-        
-        <!-- SECTION 14 -->
-        <h2 class="section-title">Section 14: Sustainability and Social Responsibility</h2>
-        <div class="field checkbox-group">
-            <label class="field-label">Sustainability Practices:</label><br>
-            <label><input type="checkbox"> Recycling</label> <label><input type="checkbox"> Energy Efficiency</label> <label><input type="checkbox"> Waste Reduction</label> <label><input type="checkbox"> Sustainable Sourcing</label>
-        </div>
-        <div class="field"><label class="field-label">Aligned Cause/Mission:</label><textarea></textarea></div>
-        
-        <!-- SECTION 15 -->
-        <h2 class="section-title">Section 15: Exit Strategy</h2>
-        <div class="field"><label class="field-label">10-Year Vision:</label><textarea></textarea></div>
-        <div class="field checkbox-group">
-            <label class="field-label">Preferred Exit Strategy:</label><br>
-            <label><input type="checkbox"> Sell to Competitor</label> <label><input type="checkbox"> Management Buyout</label> <label><input type="checkbox"> Family Succession</label> <label><input type="checkbox"> IPO</label>
-        </div>
-        <div class="field"><label class="field-label">Skills Future Leader Will Need:</label><textarea></textarea></div>
-    </div>
-</body>
-</html>
+        <h2 class="section-title">Section 10:
